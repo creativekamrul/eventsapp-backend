@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Events",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "EventName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200,
+      "minLength": 10
+    },
+    "EventDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "EventLocation": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 20,
+      "required": true
+    },
+    "FeaturedImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "EventDescription": {
+      "type": "richtext",
+      "required": false,
+      "maxLength": 500
+    },
+    "EventCategory": {
+      "type": "enumeration",
+      "enum": [
+        "Music Festival",
+        "Meetup",
+        "Grand Prix",
+        "Conference"
+      ],
+      "required": true,
+      "default": "Music Festival"
+    }
+  }
+}
